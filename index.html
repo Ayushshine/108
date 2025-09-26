@@ -1039,6 +1039,15 @@ photoStyle.textContent = `
     }
 `;
 document.head.appendChild(photoStyle);
+        const bgAudio = document.getElementById('bgAudio');
+
+// Play music when message/button action happens
+bgAudio.play().catch(()=>{});
+
+// Example: to pause
+// bgAudio.pause();
+
+        
     </script>
 
 
