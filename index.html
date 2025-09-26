@@ -605,7 +605,7 @@ body {
                 <div class="heart">💗</div>
                 <div class="heart">❤️</div>
             </div>
-            <button class="cta-button" onclick="scrollToSection('gallery')" id="bgAudio"> 
+            <button class="cta-button" onclick="scrollToSection('gallery')"> 
                 Start the Celebration 🎉
             </button>
         </div>
@@ -1039,13 +1039,12 @@ photoStyle.textContent = `
     }
 `;
 document.head.appendChild(photoStyle);
-        const bgAudio = document.getElementById('bgAudio');
-
-// Play music when message/button action happens
-bgAudio.play().catch(()=>{});
-
-// Example: to pause
-// bgAudio.pause();
+       function startMusic() {
+    const bgAudio = document.getElementById('bgAudio');
+    bgAudio.play().catch((err) => {
+        console.log("Autoplay blocked, user interaction needed", err);
+    });
+}
 
         
     </script>
